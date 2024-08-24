@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+
+.alc {
+	align-items: center;
+}
+
+.main_hero_banner h1 {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #fff;
+}
+.main_hero_banner p {
+	color: #fff;
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+.main_hero_banner {
+    background: url("../images/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 9rem 0px;
+    position: relative;
+}
+
+.main_hero_banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000091;
+}
+
+.banner_content {
+	position: relative;
+}
+
+.button.theme_btn {
+    background-color: #fff;
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    padding: 0px 25px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+
+
+.form_spinner_wrap {
+    background: #000;
+}
+
+div#wheel {
+    display: block;
+    margin: auto;
+}
+
+.form_spinner_wrap h2,
+.form_spinner_wrap p {
+	color: #fff;
+}
+
+
+.form_spinner_wrap form .form-control {
+    width: 100%;
+    border-width: 1px;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity));
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    border-radius: 0px;
+    padding-bottom: 1rem;
+    color: #374151;
+    background-color: #fff;
+}
+
+
+.form_spinner_wrap form {
+    max-width: 500px;
+    margin: auto;
+}
+
+
+.form_spinner_wrap input[type="submit"] {
+  	width: 100%;
+    border-width: 1px;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity));
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    border-radius: 0px;
+    padding-bottom: 1rem;
+    color: #000;
+    background-color: ##e5e7eb;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+}
+
+
+.form_spinner_wrap .form-control:focus {
+	box-shadow: unset;
+	outline: unset;
+}
+
+.form_spinner_wrap .form-check {
+    padding: 24px 24px 16px;
+}
+
+.form_spinner_wrap .form_wrap {
+	margin-top: -40px;
+}
+
+.form_spinner_wrap .form-check label {
+    color: #fff;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+.form_spinner_wrap .form_wrap h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.form_spinner_wrap .form_wrap p {
+    font-size: 1.25rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+
+.copyright_wrap {
+    background-color: #fff;
+    padding: 10px;
+}
+.copyright_wrap p {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+
+
+
+#welcome_popup img {
+    width: 100%;
+    max-width: 100px;
+    margin: auto;
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+
+#welcome_popup h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(55 65 81);
+    text-align: center;
+}
+
+#welcome_popup ul li span {
+    align-items: center !important;
+    background-color: #374151!important;
+    border-radius: 46px !important;
+    color: #fff !important;
+    display: inline-flex !important;
+    font-weight: 600 !important;
+    height: 35px !important;
+    justify-content: center !important;
+    margin-right: 10px;
+    width: 35px !important;
+    font-size: 16px;
+}
+
+#welcome_popup ul li {
+    display: flex;
+    align-items: center;
+    line-height: 55px;
+    font-size: 12px;
+}
+
+#welcome_popup {
+    background: rgb(156 163 175 / 25%);
+}
+
+#welcome_popup .modal-dialog {
+    max-width: 600px;
+}
+
+#welcome_popup ul {
+    padding-left: 0px;
+    list-style: none;
+    max-width: 366px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+#welcome_popup button {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    border: unset;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 600;
+}

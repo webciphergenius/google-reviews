@@ -1,0 +1,34 @@
+@media screen and (max-width: 600px) {
+.main_hero_banner {
+    padding: 7rem 0px;
+}
+.main_hero_banner h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+.main_hero_banner::before {
+    background-color: #0000009c;
+}
+
+
+.form_spinner_wrap svg {
+    width: 100%;
+    height: 100%;
+}
+
+.form_spinner_wrap .form_wrap {
+    margin-top: unset;
+    padding: 0px 34px 34px;
+}
+
+.form_spinner_wrap .form_wrap h2 {
+    text-align: center;
+}
+
+ .form_spinner_wrap .form_wrap p {
+    text-align: center;
+    line-height: 1.4;
+}
+
+
+}
