@@ -50,29 +50,32 @@
           <!------------------------>
           <div class="col-lg-6 form_wrap">
             <div>
-              <form>
+            <form method="POST" action="{{ route('users.store') }}">
+                        @csrf
+                        <h2>Fais tourner la roue ...</h2>
+                        <p>et dis nous qui tu es pour qu'on t'envoie le butin</p>
 
-                <h2>Fais tourner la roue ...</h2>
-                <p>et dis nous qui tu es pour qu'on t'envoie le butin</p>
+                        <div class="mb-3">
+                            <input type="text" name="prenom" class="form-control" placeholder="Prénom" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" name="numero_de_telephone" class="form-control" required size="20" maxlength="15" minlength="9" placeholder="Numéro de téléphone">
+                        </div>
+                        <div class="mb-3">
+        <input id="email" name="email" class="form-control" required="" type="email" placeholder="Email" value="{{ old('email') }}">
+        @error('email')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Je veux recevoir des cadeaux de la part de mon restaurant
+                            </label>
+                        </div>
 
-                <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Prénom">
-                </div>
-                <div class="mb-3">
-                  <input type="tel" class="form-control" required="" size="20" maxlength="15" minlength="9" placeholder="Numéro de téléphone">
-                </div>
-                <div class="mb-3">
-                  <input id="email" class="form-control" name="email" required="" type="email" placeholder="Email">
-                </div>
-                <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
-                  Je veux recevoir des cadeaux de la part de mon restaurant
-                </label>
-              </div>
-
-              <input type="submit" name="" value="Lancer la roue">
-              </form>
+                        <input type="submit" value="Lancer la roue" class="btn btn-primary">
+                    </form>
             </div>
           </div>
         </div>
