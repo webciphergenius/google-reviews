@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\QRCodeMail;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -29,24 +31,32 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate the incoming request
+        
         $validatedData = $request->validate([
             'prenom' => 'required|string|max:255',
             'numero_de_telephone' => 'required|string|min:9|max:15',
             'email' => 'required|email|unique:users,email',
         ]);
     
-        // Create a new user instance and fill in the data
+       
         $user = new User();
         $user->name = $validatedData['prenom'];
         $user->phone_number = $validatedData['numero_de_telephone'];
         $user->email = $validatedData['email'];
-    
-        // Save the user to the database
         $user->save();
     
-        // Redirect to QR code route with user ID or other necessary data
-        return redirect()->route('qrcode.show', ['user' => $user->id])->with('success', 'Data saved successfully!');
+        
+        $qrCode = QrCode::format('png')->size(300)->generate('https://google.com');
+        
+        
+        $qrCodePath = storage_path('app/public/qrcodes/qrcode_'.$user->id.'.png');
+        file_put_contents($qrCodePath, $qrCode);
+    
+        
+        Mail::to($user->email)->send(new QRCodeMail($user, $qrCodePath));
+    
+        
+        return redirect()->back()->with('success', 'Data saved and QR code sent to your email!');
     }
 
     /**

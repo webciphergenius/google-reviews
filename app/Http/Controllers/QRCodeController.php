@@ -13,7 +13,7 @@ class QRCodeController extends Controller
     public function show(User $user)
     {
         // Generate the QR code
-        $qrCode = QrCode::size(300)->generate('https://example.com/some-url/'.$user->id);
+        $qrCode = QrCode::size(300)->generate('https://google.com/some-url/'.$user->id);
 
         return view('qrcode.show', compact('qrCode', 'user'));
     }
