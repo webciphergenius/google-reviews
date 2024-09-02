@@ -224,3 +224,22 @@ div#wheel {
     font-size: 1.3rem;
     font-weight: 600;
 }
+
+  #chart{
+      /* position:absolute; */
+      width:500px;
+      height:500px;
+      top:0;
+      left:0;
+  }
+  #question{
+      position: absolute;
+      width:400px;
+      height:500px;
+      top:0;
+      left:520px;
+  }
+
+  #chart svg {
+    fill: #fff;
+}

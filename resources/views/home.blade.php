@@ -34,13 +34,17 @@
       <div class="container">
         <div class="row alc">
           <div class="col-lg-6 text-center">
-            <div id="wheel" class="wheel wheel_font-size--4">
+            <!-- <div id="wheel" class="wheel wheel_font-size--4">
               <svg font-size="0.6rem" height="616px" width="476px" viewBox="0 0 516 616"><g class="wrapper" transform="translate(258, 308)"><defs><filter id="shadow" x="-100%" y="-100%" width="550%" height="550%"><feOffset in="SourceAlpha" dx="0" dy="0" result="offsetOut"></feOffset><feGaussianBlur stdDeviation="9" in="offsetOut" result="drop"></feGaussianBlur><feColorMatrix in="drop" result="color-out" type="matrix" values="0 0 0 0   0
                 0 0 0 0   0
                 0 0 0 0   0
                 0 0 0 .3 0
               "></feColorMatrix><feBlend in="SourceGraphic" in2="color-out" mode="normal"></feBlend></filter></defs><g class="wheelholder"><g><path class="slice" d="M1.1899950416728537,-237.9970250061979A238,238,0,0,1,237.9970250061979,-1.1899950416728646L0,0Z" stroke="#000000" stroke-width="3" fill="#fffb00"></path><path class="slice" d="M237.9970250061979,1.1899950416728646A238,238,0,0,1,1.1899950416728537,237.9970250061979L0,0Z" stroke="#000000" stroke-width="3" fill="#00f900"></path><path class="slice" d="M-1.1899950416728247,237.9970250061979A238,238,0,0,1,-237.9970250061979,1.1899950416728684L0,0Z" stroke="#000000" stroke-width="3" fill="#ff9300"></path><path class="slice" d="M-237.9970250061979,-1.18999504167281A238,238,0,0,1,-1.1899950416728828,-237.9970250061979L0,0Z" stroke="#000000" stroke-width="3" fill="#ff2600"></path><path class="hiddenarcs" id="middleArc0" d="M1.1899950416728537 -237.9970250061979A238 238 0 0 1 237.9970250061979 -1.1899950416728646" style="fill: none;"></path><path class="hiddenarcs" id="middleArc1" d="M1.1899950416728537 237.9970250061979A238 238 0 0 0237.9970250061979 1.1899950416728646" style="fill: none;"></path><path class="hiddenarcs" id="middleArc2" d="M-237.9970250061979 1.1899950416728684A238 238 0 0 0-1.1899950416728247 237.9970250061979" style="fill: none;"></path><path class="hiddenarcs" id="middleArc3" d="M-1.1899950416728828 -237.9970250061979A238 238 0 0 0-237.9970250061979 -1.18999504167281" style="fill: none;"></path><text class="middleArcText" dy="42"><textPath startOffset="50%" text-anchor="middle" fill="#000000" xlink:href="#middleArc0">une boisson</textPath></text><text class="middleArcText" dy="-35"><textPath startOffset="50%" text-anchor="middle" fill="#000000" xlink:href="#middleArc1">un dessert</textPath></text><text class="middleArcText" dy="-35"><textPath startOffset="50%" text-anchor="middle" fill="#000000" xlink:href="#middleArc2">une entrée</textPath></text><text class="middleArcText" dy="-35"><textPath startOffset="50%" text-anchor="middle" fill="#000000" xlink:href="#middleArc3">un burger + frites</textPath></text></g><circle cx="0" cy="0" r="95.2" fill="#ffffff" filter="url(#shadow)" stroke-width="4" stroke="#000000"></circle><g><circle cx="0" cy="0" r="236" fill="transparent" stroke-width="8" filter="url(#shadow)" stroke="#ffffff"></circle></g><image x="-59.5" y="-59.5" width="119" height="119" xlink:href="https://static.heypongo.com/contest-games/images/2602_logo_1692365848.png"></image><g><path d="M95.3,9.8c-16.5,0-23.7,15.6-21.9,27c3.4,21.7,21.9,42.2,21.9,42.2s18.5-20.5,21.9-42.2 C118.9,25.4,111.8,9.8,95.3,9.8z" transform="matrix(1, 0, 0, 1, -95, -288)" stroke="#ffffff" fill="#FFFFFF" filter="url(#shadow)" stroke-linejoin="round" stroke-width="4"></path></g></g></g></svg>
+            </div> -->
+            <div id="chart">
+
             </div>
+    
           </div>
 
           <!------------------------>
@@ -90,6 +94,7 @@
 
    <!------------------------------------> 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
   </body>
   </html>
