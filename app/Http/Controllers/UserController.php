@@ -47,17 +47,28 @@ class UserController extends Controller
     
         
         $qrCode = QrCode::format('png')->size(300)->generate('https://google.com');
+
+            if (!file_exists(public_path('qrcodes'))) {
+                mkdir(public_path('qrcodes'), 0755, true);
+            }
+            
+            // Define the path to save the QR code in the public directory
+            $qrCodePath = 'qrcodes/qrcode_' . $user->id . '.png';
         
+            // Save the QR code image in the public directory
+            file_put_contents(public_path($qrCodePath), $qrCode);
         
-        $qrCodePath = storage_path('app/public/qrcodes/qrcode_'.$user->id.'.png');
-        file_put_contents($qrCodePath, $qrCode);
+            // Get the public URL of the QR code image
+            $qrCodeUrl = asset($qrCodePath);
     
         
         Mail::to($user->email)->send(new QRCodeMail($user, $qrCodePath));
     
         
-        return redirect()->back()->with('success', 'Data saved and QR code sent to your email!');
-    }
+        return response()->json([
+            'success' => true,
+            'message' => 'QR code sent to your email!'
+        ]);    }
 
     /**
      * Show the form for editing the specified user.
