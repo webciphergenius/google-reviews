@@ -51,6 +51,10 @@
             // Set up the event listener for the button click
             document.getElementById('modalButton').addEventListener('click', function () {
                 handleButtonClick(); // Set the cookie when button is clicked
+                const element = document.querySelector('.modal-backdrop');
+if (element) {
+  element.remove();;
+}
             });
         });
     </script>
